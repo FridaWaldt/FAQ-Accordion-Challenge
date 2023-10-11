@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
+  background-color: black;
+  color: hsl(238, 29%, 16%);
+}
+
+.position-app {
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*CARD DESIGN*/
+.card {
+  background-color: white;
+  margin: 5rem 1.5rem 0 1.5rem;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 1rem 0 2rem 0;
+}
+
+.illustration-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.illustration-desktop {
+  display: none;
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1rem 1.5rem 2rem 1.5rem;
+}
+
+.faq h1 {
+  width: 100%;
+}
+
+#img-woman-mobile {
+  margin-top: -7rem;
+  width: 250px;
+}
+
+#img-woman-desktop {
+  margin-left: -5rem;
+  z-index: 2;
+  position: absolute;
+}
+
+#img-box-mobile {
+  margin-top: -4.5rem;
+}
+#img-box-desktop {
+  z-index: 1;
+}
+
+/*ACCORDIAN DESIGN*/
+.accordian-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.accordian-item-content {
+  padding-right: 1rem;
+}
+
+.accordian-item-question {
+  color: hsl(238, 29%, 16%);
+  font-size: 14px;
+}
+.accordian-item-question:hover {
+  color: hsl(14, 88%, 65%);
+  cursor: pointer;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.accordian-item-answer {
+  padding-top: 1rem;
+  color: hsl(240, 6%, 50%);
+}
+
+.divider {
+  margin: 1rem 0;
+  width: 100%;
+  background-color: hsl(240, 5%, 91%);
+  height: 0.5px;
+}
+
+/*the conditinal classnames for if an item is active*/
+.reverted {
+  transform: scaleY(-1);
+}
+.bold {
+  font-weight: 700;
+}
+
+/*MEDIA QUERY*/
+@media screen and (min-width: 1440px) {
+  .card {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 3rem 7rem 3rem 0;
+    overflow: hidden;
+  }
+  .faq {
+    /* margin-left: 5rem; */
+    max-width: 320px;
+  }
+
+  .illustration-mobile {
+    display: none;
+  }
+
+  .illustration-desktop {
+    display: inline;
+  }
+}
