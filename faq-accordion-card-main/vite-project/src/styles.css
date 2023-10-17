@@ -29,6 +29,7 @@ body {
 
 /*CARD DESIGN*/
 .card {
+  max-width: 325px;
   background-color: white;
   margin: 5rem 1.5rem 0 1.5rem;
   border-radius: 25px;
@@ -36,6 +37,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1;
+  position: relative;
+  
 }
 .card h1 {
   text-align: center;
@@ -52,6 +56,8 @@ body {
 
 .illustration-desktop {
   display: none;
+  position: absolute;
+  z-index: 1;
 }
 
 .faq {
@@ -73,15 +79,21 @@ body {
 
 #img-woman-desktop {
   margin-left: -5rem;
-  z-index: 2;
+  margin-top: 2rem;
+  z-index: 1;
+  position: relative;
+}
+
+#img-box-desktop{
   position: absolute;
+  left: 50%; 
+  top: 50%; 
+  transform: translate(-150%, -20%); /* Center the box relative to its container */
+  z-index: 999;
 }
 
 #img-box-mobile {
   margin-top: -4.5rem;
-}
-#img-box-desktop {
-  z-index: 1;
 }
 
 /*ACCORDIAN DESIGN*/
@@ -137,10 +149,15 @@ button {
     align-items: flex-start;
     padding: 3rem 7rem 3rem 0;
     overflow: hidden;
+    max-width: 860px;
+    background-image: url('../../images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: 550% 60%;
   }
   .faq {
-    /* margin-left: 5rem; */
+    margin-left: 5rem;
     max-width: 320px;
+    padding: 0
   }
 
   .illustration-mobile {
@@ -148,6 +165,8 @@ button {
   }
 
   .illustration-desktop {
-    display: inline;
+    display: block;
+    position: relative;
+    z-index: 1;
   }
 }
